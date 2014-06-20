@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="forum">
+	<head>
+		<meta charset="utf-8">
+		<title>Forum</title>
+
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/sticky-footer.css">
+
+<!--		<script data-main="js/main" src="js/libs/require.js"></script> -->
+		
+		<script type="text/javascript" src="js/libs/jquery.js"></script>
+		<script type="text/javascript" src="js/libs/angular.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+		<script type="text/javascript" src="js/libs/angular-route.min.js"></script>
+		<script type="text/javascript" src="js/libs/angular-cookies.min.js"></script>
+		<script type="text/javascript" src="js/libs/angular-animate.min.js"></script>
+		<script type="text/javascript" src="js/interface/IMainScope.js"></script>
+		<script type="text/javascript" src="js/models/Thread.js"></script>
+		<script type="text/javascript" src="js/models/User.js"></script>
+		<script type="text/javascript" src="js/models/Post.js"></script>
+		<script type="text/javascript" src="js/models/ThreadItem.js"></script>
+		<script type="text/javascript" src="js/controller/LoginController.js"></script>
+		<script type="text/javascript" src="js/controller/HomeController.js"></script>
+		<script type="text/javascript" src="js/controller/ThreadController.js"></script>
+		<script type="text/javascript" src="js/controller/StatisticController.js"></script>
+		<script type="text/javascript" src="js/services/Storage.js"></script>
+		<script type="text/javascript" src="js/Application.js"></script>
+	</head>
+	<body>
+		<div class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Forum</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="#/">Home</a></li>
+						<li><a href="#/statistic">Statistic</a></li>
+						<li><a>Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-container container">
+			<div ng-view class="reveal"></div>
+		</div>
+
+		<div id="footer">
+			<div class="container">
+				<p class="text-muted">Created By vincentsthe</p>
+			</div>
+		</div>
+	</body>
+</html>

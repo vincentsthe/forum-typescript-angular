@@ -1,0 +1,103 @@
+body {
+	background-color: #FFF;
+}
+
+.content-container {
+	width:1000px;
+	margin:0 auto;
+}
+
+.login-box {
+	margin: 0 auto;
+	background-color: #F8F8F8;
+	border: 1px solid #E7E7E7;
+	width: 450px;
+	padding: 15px;
+}
+
+.reveal.ng-enter {
+	-webkit-transition: 1s linear all;
+	transition: 1s linear all;
+
+	opacity: 0;
+}
+
+.reveal.ng-enter.ng-enter-active {
+	opacity: 1;
+}
+
+.sample.ng-hide-add, .sample.ng-hide-remove {
+	-webkit-transition: all linear .5s;
+	-moz-transition: all linear .5s;
+	transitional: all linear .5s;
+
+	display:block!important;
+}
+
+.sample.ng-hide-add.ng-hide-add-active,
+.sample.ng-hide-remove {
+	position: relative;
+	top: -90px;
+	opacity: 0;
+}
+
+.sample.ng-hide-add,
+.sample.ng-hide-remove.ng-hide-remove-active {
+	position: relative;
+	top: 0px;
+	opacity: 1;
+}
+
+.red {
+	color: red;
+}
+
+.table-header th {
+	background-color: #428BCA;
+}
+
+.border-left {
+	border-left: 1px solid #D7D7D7;
+}
+
+.container {
+	width: 1080px;
+}
+
+#post-count-chart .bar {
+	font: 10px sans-serif;
+	background-color: steelblue;
+	text-align: right;
+	padding: 3px;
+	margin: 1px;
+	color: white;
+}
+
+#vertical-chart rect {
+	fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x .axis path {
+  display: none;
+}
+
+.bar {
+	fill: steelblue;
+}

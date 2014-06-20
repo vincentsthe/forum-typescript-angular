@@ -1,0 +1,59 @@
+<div class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li ng-class="{active: active=='all'}"><a ng-click="vm.changeActive('all')">All Thread</a></li>
+				<li ng-class="{active: active=='my'}"><a ng-click="vm.changeActive('my')">My Thread</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a>{{username}}</a></li>
+				<li><a ng-click="vm.logout()">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<span class="help-block">Showing {{listThread.length}} Threads</span>
+	</div>
+	<div class="col-md-6 text-right">
+		<button type="button" class="btn btn-primary" ng-click="vm.toggleNew()">New Thread</button>
+	</div>
+</div>
+
+<div class="row" ng-show="newVisible">
+	<br>
+	<div class="col-md-12">
+		<form role="form" ng-submit="vm.createThread()">
+	 	<div class="form-group">
+	    	<label for="title">Title</label>
+	    	<input class="form-control" id="title" ng-model="newTitle">
+	  	</div>
+  	</div>
+</div>
+
+<div class="row" ng-show="hasSuccess">
+	<br>
+	<div class="col-md-12">
+		<div class="alert alert-success">
+			Thread Successfully created.
+		</div>
+	</div>
+</div>
+
+<br>
+<table class="table table-striped">
+	<tr class="table-header">
+		<th style="background-color: #428BCA;" width="6%">ID</th>
+		<th style="background-color: #428BCA;" width="70%">Title</th>
+		<th style="background-color: #428BCA;" width="17%">Author</th>
+		<th style="background-color: #428BCA;" width="7">Reply</th>
+	</tr>
+	<tr ng-repeat="thread in listThread">
+		<td>{{thread.id}}</td>
+		<td><a href="#/thread/{{thread.id}}">{{thread.title}}</a></td>
+		<td>{{thread.author}}</td>
+		<td>{{thread.reply}}</td>
+	</tr>
+</table>

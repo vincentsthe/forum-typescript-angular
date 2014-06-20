@@ -1,0 +1,36 @@
+<div class="page-header">
+	<h1>{{thread.title}}</h1>
+</div>
+
+<div class="row">
+	<div class="col-md-12 help-block">
+		Showing {{listPost.length}} Posts.
+	</div>
+</div>
+
+<div class="row" ng-show="!listPost.length">
+	<div class="col-md-12">
+		No post in this thread yet.
+	</div>
+</div>
+
+<br>
+<div ng-repeat="post in listPost">
+	<div class="panel panel-primary">
+		<div class="panel-heading">#{{post.postNumber}}</div>
+		<div class="panel-body">
+			<div class="col-md-2">
+				{{post.author}}
+			</div>
+			<div class="col-md-10 border-left">
+				{{post.content}}
+			</div>
+		</div>
+	</div>
+</div>
+
+<textarea rows="7" ng-model="newContent" class="form-control"></textarea>
+<br>
+<div class="text-right">
+	<button type="button" class="btn btn-primary" ng-click="vm.post()">Post</button>
+</div>
