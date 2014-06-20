@@ -8,7 +8,6 @@
 module forum {
 
     var forumApp = angular.module('forum', ['ngRoute','ngCookies','ngAnimate'])
-    				.controller("Controller", Controller)
     				.controller("HomeController", HomeController)
     				.controller("LoginController", LoginController)
     				.controller("ThreadController", ThreadController)

@@ -6,7 +6,7 @@
 */
 var forum;
 (function (forum) {
-    var forumApp = angular.module('forum', ['ngRoute', 'ngCookies', 'ngAnimate']).controller("Controller", forum.Controller).controller("HomeController", forum.HomeController).controller("LoginController", forum.LoginController).controller("ThreadController", forum.ThreadController).controller("StatisticController", forum.StatisticController);
+    var forumApp = angular.module('forum', ['ngRoute', 'ngCookies', 'ngAnimate']).controller("HomeController", forum.HomeController).controller("LoginController", forum.LoginController).controller("ThreadController", forum.ThreadController).controller("StatisticController", forum.StatisticController);
 
     forumApp.config(function ($routeProvider) {
         $routeProvider.when('/', {
